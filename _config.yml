@@ -1,11 +1,45 @@
-title: Hac's note
-description: Place where i store most of my notes 
+# Site settings
+title: Your Site Title
+description: A brief description of your site
+baseurl: "" # If your site is hosted at a subpath, set the baseurl here
+url: "https://notes.hac10101.com" # Your site URL
 
+# Theme settings
 theme: jekyll-theme-hacker
 
+# Build settings
 markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     css_class: "highlight"
+
+plugins:
+  - jekyll-feed # Generate an RSS feed for your site
+  # Add any additional plugins you want to use
+
+# Exclude files and folders from the build process
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+
+# Navigation links
+nav_links:
+  - label: Home
+    url: "/"
+
+# Permalinks structure
+permalink: /:categories/:title/
+
+# Pagination settings
+paginate: 5 # Number of posts to display per page
+
+# Collections
+collections:
+  red-team:
+    output: true
+    permalink: /:path/:basename
